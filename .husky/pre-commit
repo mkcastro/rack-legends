@@ -1,0 +1,10 @@
+echo "🔍 Running pre-commit checks..."
+
+# Run lint-staged (linting and formatting)
+pnpm exec lint-staged
+
+# Type check
+echo "🔎 Type checking..."
+pnpm type-check || exit 1
+
+echo "✅ Pre-commit checks passed!"
